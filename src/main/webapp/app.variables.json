@@ -445,13 +445,18 @@
     "serviceType" : "JavaService",
     "wmServiceOperationInfo" : {
       "relativePath" : "/myBasic/associateTypesWithPerson",
-      "httpMethod" : "get",
+      "httpMethod" : "post",
       "name" : "associateTypesWithPerson",
       "produces" : [ "application/json" ],
+      "consumes" : [ "multipart/form-data" ],
       "parameters" : [ {
-        "name" : "name",
-        "parameterType" : "query",
+        "name" : "person",
+        "parameterType" : "formData",
         "type" : "string"
+      }, {
+        "name" : "formdata",
+        "parameterType" : "formData",
+        "type" : "array"
       } ]
     },
     "dataSet" : {

@@ -2,6 +2,9 @@
 package com.basics.mybasicservice.controller;
 
 import com.basics.mybasicservice.MyBasicService;
+import com.basics.basicsdb.Person;
+import com.basics.basicsdb.Type;
+import java.util.ArrayList;
 import java.lang.String;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
@@ -17,8 +20,8 @@ public class MyBasicController {
     @Autowired
     private MyBasicService myBasicService;
 
-    @RequestMapping(value = "/associateTypesWithPerson", produces = "application/json", method = RequestMethod.GET)
-    public String associateTypesWithPerson(@RequestParam(value = "name", required = false) String name) {
-        return myBasicService.associateTypesWithPerson(name);
+    @RequestMapping(value = "/associateTypesWithPerson", produces = "application/json", method = RequestMethod.POST, consumes = "multipart/form-data")
+    public String associateTypesWithPerson(@RequestPart(value = "person") Person person, @RequestPart ArrayList<Type> types) {
+        return myBasicService.associateTypesWithPerson(person, types);
     }
 }
