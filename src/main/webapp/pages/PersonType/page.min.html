@@ -1,0 +1,276 @@
+<style id="PersonType.css">
+
+</style>
+<script id="PersonType.js">
+Application.$controller("PersonTypePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("liveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="PersonType.variables.json">
+var _PersonTypePage_Variables_ ={
+  "BasicsDBPersonTypeData" : {
+    "_id" : "wm-BasicsDBPersonTypeData-wm.LiveVariable-1463982660869",
+    "name" : "BasicsDBPersonTypeData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "PersonType",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "basicsDB",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "person",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "PERSON_ID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : true,
+        "defaultValue" : "",
+        "relatedTableName" : "PERSON",
+        "relatedEntityName" : "Person",
+        "relatedFieldName" : "person.id",
+        "isList" : false,
+        "targetTable" : "PERSON",
+        "scale" : 0,
+        "columns" : [ {
+          "fieldName" : "place",
+          "type" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "PLACE_ID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 10,
+          "generator" : "assigned",
+          "isRelated" : true,
+          "defaultValue" : "",
+          "targetTable" : "PLACE",
+          "scale" : 0
+        }, {
+          "fieldName" : "id",
+          "type" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "ID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 10,
+          "generator" : "identity",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        }, {
+          "fieldName" : "name",
+          "type" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "NAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "assigned",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        }, {
+          "fieldName" : "age",
+          "type" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "AGE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 10,
+          "generator" : "assigned",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        } ]
+      }, {
+        "fieldName" : "type",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TYPE_ID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : true,
+        "defaultValue" : "",
+        "relatedTableName" : "TYPE",
+        "relatedEntityName" : "Type",
+        "relatedFieldName" : "type.id",
+        "isList" : false,
+        "targetTable" : "TYPE",
+        "scale" : 0,
+        "columns" : [ {
+          "fieldName" : "id",
+          "type" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "ID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 10,
+          "generator" : "identity",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        }, {
+          "fieldName" : "name",
+          "type" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "NAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "assigned",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        }, {
+          "fieldName" : "minAge",
+          "type" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "MIN_AGE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 10,
+          "generator" : "assigned",
+          "isRelated" : false,
+          "defaultValue" : "",
+          "scale" : 0
+        } ]
+      }, {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      } ],
+      "entityName" : "PersonType",
+      "fullyQualifiedName" : "com.basics.basicsdb.PersonType",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 2,
+    "tableName" : "PERSON_TYPE",
+    "tableType" : "TABLE",
+    "properties" : [ "person", "type" ],
+    "relatedTables" : [ {
+      "columnName" : "person",
+      "relationName" : "person",
+      "type" : "Person",
+      "watchOn" : "BasicsDBPersonData",
+      "package" : "com.basics.basicsdb.PersonType"
+    }, {
+      "columnName" : "type",
+      "relationName" : "type",
+      "type" : "Type",
+      "watchOn" : "BasicsDBTypeData",
+      "package" : "com.basics.basicsdb.PersonType"
+    } ],
+    "package" : "com.basics.basicsdb.PersonType"
+  }
+}
+</script>
+<script id="PersonType.html" type="text/ng-template">
+<wm-page data-ng-controller="PersonTypePageController" pagetitle="Person Type" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livegrid name="livegrid1" service="basicsDB@PersonType">
+                <wm-grid gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false" title="PERSON_TYPE List" dataset="bind:Variables.BasicsDBPersonTypeData.dataSet" navigation="Basic" name="grid1">
+                    <wm-grid-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+                    <wm-grid-column binding="person.id" caption="Person Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+                    <wm-grid-column binding="person.name" caption="Person Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="person.age" caption="Person Age" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-grid-column>
+                    <wm-grid-column binding="type.id" caption="Type Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+                    <wm-grid-column binding="type.name" caption="Type Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="type.minAge" caption="Type Min Age" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-grid-column>
+                </wm-grid>
+                <wm-liveform novalidate="false" title="PERSON_TYPE Info" formlayout="inline" dataset="bind:Variables.BasicsDBPersonTypeData.dataSet" captionalign="left" captionposition="top" name="liveform1">
+                    <wm-layoutgrid name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="12" show="hide" name="gridcolumn1">
+                                <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn2">
+                                <wm-form-field name="person" displayname="Person" required="false" show="true" generator="assigned" primary-key="false" key="person" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn3">
+                                <wm-form-field name="type" displayname="Type" required="false" show="true" generator="assigned" primary-key="false" key="type" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3"></wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

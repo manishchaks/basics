@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="basicsDB" type="DataService" springFile="basicsDB.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.basics.basicsdb.User">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.basics.basicsdb.Place">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="persons" typeRef="com.basics.basicsdb.Person" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.basics.basicsdb.Type">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="minAge" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="personTypes" typeRef="com.basics.basicsdb.PersonType" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.basics.basicsdb.PersonType">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="person" typeRef="com.basics.basicsdb.Person" allowNull="true"/>
+            <element name="type" typeRef="com.basics.basicsdb.Type" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.basics.basicsdb.Person">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="age" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="personTypes" typeRef="com.basics.basicsdb.PersonType" isList="true" allowNull="true"/>
+            <element name="place" typeRef="com.basics.basicsdb.Place" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

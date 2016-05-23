@@ -1,0 +1,40 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL"
+}, {
+  "name" : "Login",
+  "type" : "PAGE"
+}, {
+  "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "Person",
+  "type" : "PAGE"
+}, {
+  "name" : "PersonType",
+  "type" : "PAGE"
+}, {
+  "name" : "Place",
+  "type" : "PAGE"
+}, {
+  "name" : "Type",
+  "type" : "PAGE"
+}, {
+  "name" : "User",
+  "type" : "PAGE"
+}, {
+  "name" : "footer",
+  "type" : "FOOTER"
+}, {
+  "name" : "header",
+  "type" : "HEADER"
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV"
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV"
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV"
+} ]
