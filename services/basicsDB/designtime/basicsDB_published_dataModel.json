@@ -48,7 +48,7 @@
       "fieldName" : "minAge",
       "foreignKey" : false,
       "generator" : "assigned",
-      "javaType" : "integer",
+      "javaType" : "string",
       "length" : 255,
       "name" : "MIN_AGE",
       "nullable" : true,
@@ -56,11 +56,11 @@
       "partOfAnyRelation" : false,
       "partOfForeignKey" : false,
       "partOfPrimaryKey" : false,
-      "precision" : 10,
+      "precision" : 19,
       "primaryKey" : false,
       "scale" : 0,
       "sequenceName" : null,
-      "sqlType" : "number",
+      "sqlType" : "string",
       "unique" : false
     } ],
     "constraints" : [ ],
@@ -82,7 +82,7 @@
         "sourceColumn" : "ID",
         "targetColumn" : "TYPE_ID"
       } ],
-      "name" : "FK_PERSON_TYPE_TO_TYPE_TVwg2V",
+      "name" : "FK_PERSON_TYPE_TO_TYPE_TgQ7Bl",
       "primary" : false,
       "selfRelation" : false,
       "sourceTable" : "TYPE",
@@ -189,7 +189,7 @@
         "sourceColumn" : "PLACE_ID",
         "targetColumn" : "ID"
       } ],
-      "name" : "FK_PERSON_TO_PLACE_PLACEjcM2q",
+      "name" : "FK_PERSON_TO_PLACE_PLACESrmeS",
       "primary" : true,
       "selfRelation" : false,
       "sourceTable" : "PERSON",
@@ -203,7 +203,7 @@
         "sourceColumn" : "ID",
         "targetColumn" : "PERSON_ID"
       } ],
-      "name" : "FK_PERSON_TYPE_TO_PERSONFXqIM",
+      "name" : "FK_PERSON_TYPE_TO_PERSONIMzuW",
       "primary" : false,
       "selfRelation" : false,
       "sourceTable" : "PERSON",
@@ -346,7 +346,7 @@
         "sourceColumn" : "ID",
         "targetColumn" : "PLACE_ID"
       } ],
-      "name" : "FK_PERSON_TO_PLACE_PLACEjcM2q",
+      "name" : "FK_PERSON_TO_PLACE_PLACESrmeS",
       "primary" : false,
       "selfRelation" : false,
       "sourceTable" : "PLACE",
@@ -434,7 +434,7 @@
         "sourceColumn" : "PERSON_ID",
         "targetColumn" : "ID"
       } ],
-      "name" : "FK_PERSON_TYPE_TO_PERSONFXqIM",
+      "name" : "FK_PERSON_TYPE_TO_PERSONIMzuW",
       "primary" : true,
       "selfRelation" : false,
       "sourceTable" : "PERSON_TYPE",
@@ -448,7 +448,7 @@
         "sourceColumn" : "TYPE_ID",
         "targetColumn" : "ID"
       } ],
-      "name" : "FK_PERSON_TYPE_TO_TYPE_TVwg2V",
+      "name" : "FK_PERSON_TYPE_TO_TYPE_TgQ7Bl",
       "primary" : true,
       "selfRelation" : false,
       "sourceTable" : "PERSON_TYPE",

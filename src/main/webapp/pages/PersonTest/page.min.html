@@ -1,0 +1,36 @@
+<style id="PersonTest.css">
+
+</style>
+<script id="PersonTest.js">
+Application.$controller("PersonTestPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="PersonTest.variables.json">
+var _PersonTestPage_Variables_ ={}
+</script>
+<script id="PersonTest.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="PersonTestPageController" pagetitle="Person Test">
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12"></wm-page-content>
+    </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
+</wm-page>
+</script>

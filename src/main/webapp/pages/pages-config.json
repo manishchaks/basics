@@ -11,6 +11,9 @@
   "name" : "Person",
   "type" : "PAGE"
 }, {
+  "name" : "PersonTest",
+  "type" : "PAGE"
+}, {
   "name" : "PersonType",
   "type" : "PAGE"
 }, {

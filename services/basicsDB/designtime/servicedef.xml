@@ -13,9 +13,9 @@
         </dataobject>
         <dataobject javaType="com.basics.basicsdb.Type">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="minAge" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="minAge" typeRef="java.lang.String" allowNull="true"/>
             <element name="name" typeRef="java.lang.String" allowNull="true"/>
-            <element name="personTypes" typeRef="com.basics.basicsdb.PersonType" isList="true" allowNull="true"/>
+            <element name="persons" typeRef="com.basics.basicsdb.Person" isList="true" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.basics.basicsdb.PersonType">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
@@ -26,7 +26,7 @@
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="age" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="name" typeRef="java.lang.String" allowNull="true"/>
-            <element name="personTypes" typeRef="com.basics.basicsdb.PersonType" isList="true" allowNull="true"/>
+            <element name="type" typeRef="com.basics.basicsdb.Type" allowNull="true"/>
             <element name="place" typeRef="com.basics.basicsdb.Place" allowNull="true"/>
         </dataobject>
     </dataobjects>

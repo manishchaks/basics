@@ -42,7 +42,7 @@ public class Type  implements java.io.Serializable {
     
     private String name;
     
-    private Integer minAge;
+    private String minAge;
     
     private Set<PersonType> personTypes = new HashSet<PersonType>(0);
 
@@ -75,12 +75,12 @@ public class Type  implements java.io.Serializable {
 
     
 
-    @Column(name="`MIN_AGE`", precision=10)
-    public Integer getMinAge() {
+    @Column(name="`MIN_AGE`")
+    public String getMinAge() {
         return this.minAge;
     }
     
-    public void setMinAge(Integer minAge) {
+    public void setMinAge(String minAge) {
         this.minAge = minAge;
     }
 

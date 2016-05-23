@@ -1,6 +1,7 @@
 /*Copyright (c) 2016-2017 unionsystems.com.au All Rights Reserved.
  This software is the confidential and proprietary information of unionsystems.com.au You shall not disclose such Confidential Information and shall use it only in accordance
  with the terms of the source code license agreement you entered into with unionsystems.com.au*/
+
 package com.basics.basicsdb.controller;
 
 import org.slf4j.Logger;

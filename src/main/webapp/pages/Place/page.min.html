@@ -21,14 +21,18 @@ Application.$controller("PlacePageController", ["$scope", function ($scope) {
 }]);
 
 
-Application.$controller("grid1Controller", ["$scope",
+
+
+
+
+Application.$controller("grid2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("liveform1Controller", ["$scope",
+Application.$controller("liveform2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
@@ -36,72 +40,7 @@ Application.$controller("liveform1Controller", ["$scope",
 ]);
 </script>
 <script id="Place.variables.json">
-var _PlacePage_Variables_ ={
-  "BasicsDBPlaceData" : {
-    "_id" : "wm-BasicsDBPlaceData-wm.LiveVariable-1463981715234",
-    "name" : "BasicsDBPlaceData",
-    "owner" : "Page",
-    "category" : "wm.LiveVariable",
-    "dataBinding" : [ ],
-    "operation" : "read",
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "type" : "Place",
-    "isList" : true,
-    "saveInPhonegap" : false,
-    "firstRow" : 0,
-    "maxResults" : 20,
-    "designMaxResults" : 10,
-    "startUpdate" : true,
-    "autoUpdate" : true,
-    "inFlightBehavior" : "executeLast",
-    "transformationRequired" : false,
-    "liveSource" : "basicsDB",
-    "ignoreCase" : false,
-    "matchMode" : "start",
-    "propertiesMap" : {
-      "columns" : [ {
-        "fieldName" : "id",
-        "type" : "integer",
-        "fullyQualifiedType" : "integer",
-        "columnName" : "ID",
-        "isPrimaryKey" : true,
-        "notNull" : true,
-        "length" : 255,
-        "precision" : 10,
-        "generator" : "identity",
-        "isRelated" : false,
-        "defaultValue" : "",
-        "scale" : 0
-      }, {
-        "fieldName" : "name",
-        "type" : "string",
-        "fullyQualifiedType" : "string",
-        "columnName" : "NAME",
-        "isPrimaryKey" : false,
-        "notNull" : false,
-        "length" : 255,
-        "precision" : 19,
-        "generator" : "assigned",
-        "isRelated" : false,
-        "defaultValue" : "",
-        "scale" : 0
-      } ],
-      "entityName" : "Place",
-      "fullyQualifiedName" : "com.basics.basicsdb.Place",
-      "tableType" : "TABLE",
-      "primaryFields" : [ "id" ]
-    },
-    "isDefault" : true,
-    "bindCount" : 2,
-    "tableName" : "PLACE",
-    "tableType" : "TABLE",
-    "properties" : [ ],
-    "relatedTables" : [ ],
-    "package" : "com.basics.basicsdb.Place"
-  }
-}
+var _PlacePage_Variables_ ={ }
 </script>
 <script id="Place.html" type="text/ng-template">
 <wm-page data-ng-controller="PlacePageController" pagetitle="Place" name="page1">
@@ -109,22 +48,22 @@ var _PlacePage_Variables_ ={
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-livegrid name="livegrid1" service="basicsDB@Place">
-                <wm-grid gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false" title="PLACE List" dataset="bind:Variables.BasicsDBPlaceData.dataSet" navigation="Basic" name="grid1">
+            <wm-livegrid service="basicsDB@Place" name="livegrid2">
+                <wm-grid name="grid2" navigation="Basic" dataset="bind:Variables.BasicsDBPlaceData.dataSet" title="PLACE List" gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false">
                     <wm-grid-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
                     <wm-grid-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
                 </wm-grid>
-                <wm-liveform novalidate="false" title="PLACE Info" formlayout="inline" dataset="bind:Variables.BasicsDBPlaceData.dataSet" captionalign="left" captionposition="top" name="liveform1">
-                    <wm-layoutgrid name="layoutgrid1">
-                        <wm-gridrow name="gridrow1">
-                            <wm-gridcolumn columnwidth="12" show="hide" name="gridcolumn1">
+                <wm-liveform name="liveform2" captionposition="top" captionalign="left" dataset="bind:Variables.BasicsDBPlaceData.dataSet" novalidate="false" title="PLACE Info" formlayout="inline">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn name="gridcolumn3" columnwidth="12" show="hide">
                                 <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn2">
+                            <wm-gridcolumn name="gridcolumn4" columnwidth="12" show="show">
                                 <wm-form-field name="name" displayname="Name" required="false" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
-                        <wm-gridrow name="gridrow2"></wm-gridrow>
+                        <wm-gridrow name="gridrow4"></wm-gridrow>
                     </wm-layoutgrid>
                     <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
