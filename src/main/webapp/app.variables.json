@@ -15,6 +15,56 @@
     } ],
     "operation" : "toast"
   },
+  "BasicsDBExecuteCheckPersonType" : {
+    "_id" : "wm-BasicsDBExecuteCheckPersonType-wm.ServiceVariable-1464074019115",
+    "name" : "BasicsDBExecuteCheckPersonType",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "basicsDBcheckPersonTypertnType",
+    "service" : "basicsDB",
+    "operation" : "executeCheckPersonType",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/basicsDB/queryExecutor/queries/checkPersonType",
+      "httpMethod" : "get",
+      "name" : "executeCheckPersonType",
+      "parameters" : [ {
+        "name" : "person_id",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "type_id",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "BasicsDBPersonData" : {
     "_id" : "wm-BasicsDBPersonData-wm.LiveVariable-1464000237686",
     "name" : "BasicsDBPersonData",
@@ -457,6 +507,45 @@
         "name" : "formdata",
         "parameterType" : "formData",
         "type" : "array"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "MyBasicServiceCheckPersonTypeExists" : {
+    "_id" : "wm-MyBasicServiceCheckPersonTypeExists-wm.ServiceVariable-1464071958053",
+    "name" : "MyBasicServiceCheckPersonTypeExists",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "boolean",
+    "service" : "MyBasicService",
+    "operation" : "checkPersonTypeExists",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/myBasic/checkPersonTypeExists",
+      "httpMethod" : "get",
+      "name" : "checkPersonTypeExists",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "person_id",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "type_id",
+        "parameterType" : "query",
+        "type" : "integer"
       } ]
     },
     "dataSet" : {

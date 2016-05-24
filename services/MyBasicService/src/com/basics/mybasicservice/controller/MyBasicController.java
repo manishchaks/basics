@@ -24,4 +24,10 @@ public class MyBasicController {
     public String associateTypesWithPerson(@RequestPart(value = "person") Person person, @RequestPart ArrayList<Type> types) {
         return myBasicService.associateTypesWithPerson(person, types);
     }
+
+    @RequestMapping(value = "/checkPersonTypeExists", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public boolean checkPersonTypeExists(@RequestParam(value = "person_id", required = false) int person_id, @RequestParam(value = "type_id", required = false) int type_id) {
+        return myBasicService.checkPersonTypeExists(person_id, type_id);
+    }
 }

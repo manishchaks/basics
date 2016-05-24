@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="basicsDB" type="DataService" springFile="basicsDB.spring.xml">
+    <operation operationType="nativequery" name="checkPersonType">
+        <parameter name="person_id" typeRef="java.lang.Integer" isList="false"/>
+        <parameter name="type_id" typeRef="java.lang.Integer" isList="false"/>
+        <return typeRef="basicsDBcheckPersonTypertnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.basics.basicsdb.User">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
@@ -28,6 +33,11 @@
             <element name="name" typeRef="java.lang.String" allowNull="true"/>
             <element name="type" typeRef="com.basics.basicsdb.Type" allowNull="true"/>
             <element name="place" typeRef="com.basics.basicsdb.Place" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="basicsDBcheckPersonTypertnType">
+            <element name="PERSON_ID" typeRef="java.lang.Integer"/>
+            <element name="ID" typeRef="java.lang.Integer"/>
+            <element name="TYPE_ID" typeRef="java.lang.Integer"/>
         </dataobject>
     </dataobjects>
 </service>

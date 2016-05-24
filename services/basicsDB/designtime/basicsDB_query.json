@@ -1,5 +1,34 @@
 {
   "name" : "basicsDB",
   "description" : "Queries for basicsDB",
-  "queries" : [ ]
+  "queries" : [ {
+    "name" : "checkPersonType",
+    "query" : "SELECT * FROM PERSON_TYPE WHERE PERSON_ID = :person_id AND TYPE_ID = :type_id",
+    "comment" : "Given a person's ID and type, this iAPI call figures out the relationship between them.",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "person_id",
+      "paramType" : "java.lang.Integer",
+      "testValue" : "1",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    }, {
+      "paramName" : "type_id",
+      "paramType" : "java.lang.Integer",
+      "testValue" : "1",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "PERSON_ID" : "java.lang.Integer",
+      "ID" : "java.lang.Integer",
+      "TYPE_ID" : "java.lang.Integer"
+    }
+  } ]
 }

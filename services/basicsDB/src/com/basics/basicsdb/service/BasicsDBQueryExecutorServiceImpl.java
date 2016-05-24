@@ -1,7 +1,3 @@
-/*Copyright (c) 2016-2017 unionsystems.com.au All Rights Reserved.
- This software is the confidential and proprietary information of unionsystems.com.au You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with unionsystems.com.au*/
-
 
 package com.basics.basicsdb.service;
 
@@ -33,6 +29,15 @@ public class BasicsDBQueryExecutorServiceImpl implements BasicsDBQueryExecutorSe
 	@Qualifier("basicsDBWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
+	@Transactional(value = "basicsDBTransactionManager")
+	@Override
+	public Page<Object> executeCheckPersonType(Pageable pageable, java.lang.Integer person_id, java.lang.Integer type_id)
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("person_id", person_id);
+        params.put("type_id", type_id);
+        return queryExecutor.executeNamedQuery("checkPersonType", params, pageable);
+	}
 
 	@Transactional(value = "basicsDBTransactionManager")
 	@Override

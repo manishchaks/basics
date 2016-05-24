@@ -5,5 +5,10 @@
         <parameter name="types" typeRef="com.basics.basicsdb.Type" isList="true"/>
         <return typeRef="java.lang.String" isList="false"/>
     </operation>
+    <operation name="checkPersonTypeExists">
+        <parameter name="person_id" typeRef="int" isList="false"/>
+        <parameter name="type_id" typeRef="int" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
     <dataobjects/>
 </service>
